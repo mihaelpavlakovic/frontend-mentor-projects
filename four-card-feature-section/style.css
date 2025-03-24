@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;600&display=swap");
+
+:root {
+  --secondary-text-color: hsl(229, 6%, 66%);
+  --red-accent: hsl(0, 78%, 62%);
+  --cyan-accent: hsl(180, 62%, 55%);
+  --orange-accent: hsl(34, 97%, 64%);
+  --blue-accent: hsl(212, 86%, 64%);
+}
+
+body,
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  height: 100vh;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3rem auto;
+}
+
+.container h1 {
+  font-weight: 400;
+  text-align: center;
+}
+
+.container h1.bolder {
+  font-weight: 600;
+}
+
+.container .subheading {
+  text-align: center;
+  font-size: 0.9rem;
+  margin: 1.5rem 0 6rem 0;
+  color: var(--secondary-text-color);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: auto;
+  gap: 2rem;
+  margin: 0 2rem;
+}
+
+.supervisor {
+  grid-column: 1;
+  grid-row: 2 / 4;
+  border-top: 0.2rem solid var(--cyan-accent);
+}
+
+.team-builder {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  border-top: 0.2rem solid var(--red-accent);
+}
+
+.karma {
+  grid-column: 2;
+  grid-row: 3 / 5;
+  border-top: 0.2rem solid var(--orange-accent);
+}
+
+.calculator {
+  grid-column: 3;
+  grid-row: 2 / 4;
+  border-top: 0.2rem solid var(--blue-accent);
+}
+
+.card {
+  min-height: 12rem;
+  border-radius: 0.3rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem 2rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  color: var(--secondary-text-color);
+}
+
+.card img {
+  float: right;
+  padding-top: 1.5rem;
+}
+
+.grow {
+  transition: all 0.2s ease-in-out;
+}
+
+.grow:hover {
+  transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+  .container {
+    height: 100%;
+    margin: 2rem 2rem;
+  }
+
+  .container h1 {
+    font-size: 1.7rem;
+  }
+
+  .container .subheading {
+    margin: 1.5rem 0 2rem 0;
+  }
+
+  .card-grid {
+    display: block;
+    margin: 0;
+  }
+
+  .card {
+    margin-top: 1.5rem;
+  }
+}
